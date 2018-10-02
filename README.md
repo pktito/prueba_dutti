@@ -1,10 +1,11 @@
 ## - AngularJS User Registration and Login Example
 
 ### Instalación
-* Para ejecutar:
  * <pre><code> npm install </code></pre>
  * <pre><code> npm install webpack -g </code></pre>
  * <pre><code> npm install webpack-dev-server -g </code></pre>
+* Para ejecutar:
+ * <pre><code> webpack-dev-server </code></pre>
 
 ##Instrucciones:
 
