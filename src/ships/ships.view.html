@@ -1,4 +1,11 @@
-﻿<h1>{{ title }}</h1>
-<custom-md-list model="shipsValues"
-                title="'hello world'">
+﻿<div class="row">
+    <h1>{{ title }}</h1>
+</div>
+<div class="row">
+    <h2>{{ description }}</h2>
+</div>
+<div class="row"><button class="btn btn-primary">PHOTO STYLE GUIDE</button></div>
+<custom-md-list model="actualShips"
+                title="'hello world'"
+                callback="getMore(data)">
 </custom-md-list>
