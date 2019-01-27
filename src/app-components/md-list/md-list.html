@@ -1,3 +1,6 @@
 <div class="container-fluid">
     <h1>{{ title }}</h1>
+    <div ng-repeat="element in $ctrl.model">
+        <label>Name: <span>{{ element.name }}</span></label>
+    </div>
 </div>
