@@ -27,6 +27,11 @@
                 controllerAs: 'vm'
             })
 
+            .when('/ships', {
+                controller: 'ShipsController',
+                templateUrl: 'ships/ships.view.html',
+            })
+
             .otherwise({ redirectTo: '/login' });
     }
 
