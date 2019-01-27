@@ -15,7 +15,7 @@
         function initController() {
             ShipsService.GetShips().then(({data}) => onSuccess(data)).catch((error) => onError(error));
         }
-
+    
         function onSuccess({results}) {
             console.log('onSuccess', results);
             $scope.shipsValues = results;
