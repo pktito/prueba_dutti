@@ -5,11 +5,16 @@
         .component('customMdList', {
             templateUrl: 'app-components/md-list/md-list.html',
             bindings: {
-                model: '=model',
-                title: '=title  ',
+                model: '=',
+                title: '=',
+                callback: '&'
             },
             controller: function CustomMdListController () {
-                this.title = '';
+                var $ctrl = this;
+
+                $ctrl._callback = function (data) {
+                    $ctrl.callback(data);
+                };
             },
         });
 })();

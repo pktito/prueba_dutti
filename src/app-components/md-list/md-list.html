@@ -1,6 +1,13 @@
 <div class="container-fluid">
     <h1>{{ title }}</h1>
     <div ng-repeat="element in $ctrl.model">
-        <label>Name: <span>{{ element.name }}</span></label>
+        <label>Name:
+            <span>{{ element.name }}</span>
+        </label>
     </div>
+    <button type="button"
+            class="btn btn-primary"
+            ng-click="$ctrl._callback({more: true})">
+        More <span class="fa fa-plus"></span>
+    </button>
 </div>
