@@ -1,3 +1,23 @@
 ﻿a {
     cursor: pointer;
 }
+
+.btn-md-primary {
+    background: #be9c63;
+    width: 300px;
+    height: 50px;
+    color: white;
+}
+
+.container-ships, .container-detail {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container-detail {
+    margin-top: 50px;
+}
+
+.btn-detail {
+    width: 100%;
+}

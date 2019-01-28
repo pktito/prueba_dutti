@@ -1,0 +1,23 @@
+﻿<div class="container-fluid">
+    <div>
+        <h1 class="col-12 text-center">{{ title }}</h1>
+        <h4 class="col-12 text-center">{{ description.first }}</h4>
+        <h5 class="col-12 text-center">{{ description.second }}</h5>
+        <h5 class="mt-5 col-12 text-center">
+            {{ description.third }}
+            <strong>{{ description.hashTag }}</strong>
+        </h5>
+        <div class="col-12 text-center">
+            <button class="mt-3 btn btn-md-primary"
+                    ng-click="goToLocation()">
+                GO SHIPS VIEW
+            </button>
+        </div>
+    </div>
+    <div class="container-ships">
+        <custom-md-list model="actualShips"
+                        title="'hello world'"
+                        callback="getMore(data)">
+        </custom-md-list>
+    </div>
+</div>
