@@ -9,7 +9,6 @@
 
     function PhotoStyleController($scope, $location, model) {
         $scope.model = model.results;
-        console.log('$scope.photoModel', $scope.model);
         $scope.title = '#DessedinDutti';
         $scope.description = {
             first: "Welcome to MassimoDutti's community.",
@@ -18,9 +17,15 @@
             hashTag: "#DressedinDutti"
         };
 
-        $scope.goToLocation = function (){
+        $scope.goToLocation = function () {
             $location.path('/ships');
         };
+
+        $scope.goToDetail = function(url) {
+            let shipId = url.split('/');
+            shipId = shipId[shipId.length - 2];
+            $location.path('/detail').search({shipId});
+        }
     }
 
 })();
