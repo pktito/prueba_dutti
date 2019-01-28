@@ -1,13 +1,17 @@
 <div class="container-fluid">
     <h1>{{ title }}</h1>
-    <div ng-repeat="element in $ctrl.model">
-        <label>Name:
-            <span>{{ element.name }}</span>
-        </label>
-    </div>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" ng-repeat="element in $ctrl.model">
+            <span class="fa fa-jedi mr-3 ml-3"></span>
+            {{ element.name }}
+        </li>
+    </ul>
     <button type="button"
-            class="btn btn-primary"
+            class="btn btn-md-primary btn-lg btn-block"
             ng-click="$ctrl._callback({more: true})">
-        More <span class="fa fa-plus"></span>
+        <span class="mr-3 badge badge-light">{{ $ctrl.model.length }}</span>
+        More
+        <span class="fa fa-plus"></span>
     </button>
 </div>
