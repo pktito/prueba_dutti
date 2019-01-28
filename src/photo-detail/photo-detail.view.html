@@ -1,0 +1,18 @@
+﻿<div>
+    <div class="row">
+        <span class="fa fa-chevron-left"
+              ng-click="goToLocation()"></span>
+    </div>
+    <div>
+        <h1 class="col-12 text-center">{{ model.name }}</h1>
+        <h4 class="col-12 text-center">{{ model.model }}</h4>
+
+        <div class="container-detail">
+            <p><span class="fa fa-user mr-3"></span> Capacity: {{ model.passengers }}</p>
+            <p><span class="fa fa-bolt mr-3"></span> Max Velocity: {{ model.max_atmosphering_speed }}</p>
+            <p><span class="fa fa-calendar-alt mr-3"></span> Created: {{ model.created | date: longDate }}</p>
+            <p><span class="fa fa-users mr-3"></span> Capacity Charge: {{ model.cargo_capacity }}</p>
+            <p><span class="fa fa-fighter-jet mr-3"></span> Ship Class: {{ model.starship_class }}</p>
+        </div>
+    </div>
+</div>
