@@ -1,4 +1,4 @@
-﻿<div class="">
+﻿<div>
     <div>
         <h1 class="col-12 text-center">{{ title }}</h1>
         <h4 class="col-12 text-center">{{ description.first }}</h4>
@@ -15,15 +15,18 @@
         </div>
     </div>
     <div class="row mt-5">
-        <div class="col-sm-12 col-md-6" ng-repeat="card in model">
+        <div class="col-sm-12 col-md-6"
+             ng-repeat="card in model">
             <div class="card mt-3">
                 <img class="card-img-top"
-                     src="assets/jedi.jpg"
+                     src="assets/chiwie.jpg"
                      alt="{{ card.name }}">
                 <div class="card-body">
-                    <h5 class="card-title">{{ card.name }}</h5>
-                    <p class="card-text">{{ card.starship_class }}</p>
-                    <a class="card-title" href="{{ card.url }}">Show Detaill</a>
+                    <h4 class="card-title">{{ card.name }}</h4>
+                    <p class="card-text">{{ card.model }}</p>
+                    <button class="card-title btn btn-dark btn-detail"
+                            ng-click="goToDetail(card.url)">Show Detail
+                    </button>
                 </div>
             </div>
         </div>

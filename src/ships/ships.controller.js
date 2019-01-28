@@ -56,7 +56,7 @@
             paginationChange();
         };
 
-        $scope.goToLocation = function (){
+        $scope.goToLocation = function () {
             $location.path('/photo');
         };
     }

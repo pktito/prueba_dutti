@@ -9,7 +9,7 @@
                 title: '=',
                 callback: '&'
             },
-            controller: function CustomMdListController () {
+            controller: function CustomMdListController() {
                 var $ctrl = this;
 
                 $ctrl._callback = function (data) {
