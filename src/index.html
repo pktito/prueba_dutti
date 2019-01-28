@@ -3,17 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>AngularJS User Registration and Login Example</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="app-content/app.css" rel="stylesheet" />
 </head>
 <body>
     <div class="jumbotron">
         <div class="container">
-            <div class="col-sm-8 col-sm-offset-2">
                 <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
                 <div ng-view></div>
-            </div>
         </div>
     </div>
     <div class="credits text-center">
@@ -51,6 +48,7 @@
     <script src="login/login.controller.js"></script>
     <script src="register/register.controller.js"></script>
     <script src="ships/ships.controller.js"></script>
+    <script src="photo-style/photo-style.controller.js"></script>
 
 </body>
 </html>
