@@ -32,6 +32,16 @@
                 templateUrl: 'ships/ships.view.html',
             })
 
+            .when('/photo', {
+                controller: 'PhotoStyleController',
+                templateUrl: 'photo-style/photo-style.view.html',
+                resolve: {
+                    model: function(ShipsService) {
+                        return ShipsService.GetShips().then(({data}) => {return data}).catch((error) => {return error});
+                    }
+                }
+            })
+
             .otherwise({ redirectTo: '/login' });
     }
 
@@ -45,7 +55,7 @@
 
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in and trying to access a restricted page
-            var restrictedPage = $.inArray($location.path(), ['/login', '/register','/ships']) === -1;
+            var restrictedPage = $.inArray($location.path(), ['/login', '/register','/ships', '/photo']) === -1;
             var loggedIn = $rootScope.globals.currentUser;
             if (restrictedPage && !loggedIn) {
                 $location.path('/login');
