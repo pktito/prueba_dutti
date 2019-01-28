@@ -1,0 +1,31 @@
+﻿<div class="">
+    <div>
+        <h1 class="col-12 text-center">{{ title }}</h1>
+        <h4 class="col-12 text-center">{{ description.first }}</h4>
+        <h5 class="col-12 text-center">{{ description.second }}</h5>
+        <h5 class="mt-5 col-12 text-center">
+            {{ description.third }}
+            <strong>{{ description.hashTag }}</strong>
+        </h5>
+        <div class="col-12 text-center">
+            <button class="mt-3 btn btn-md-primary"
+                    ng-click="goToLocation()">
+                GO SHIPS VIEW
+            </button>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-12 col-md-6" ng-repeat="card in model">
+            <div class="card mt-3">
+                <img class="card-img-top"
+                     src="assets/jedi.jpg"
+                     alt="{{ card.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ card.name }}</h5>
+                    <p class="card-text">{{ card.starship_class }}</p>
+                    <a class="card-title" href="{{ card.url }}">Show Detaill</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
